@@ -13,7 +13,7 @@ public class PlayerBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();    
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class PlayerBehavior : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         Vector3 move = new Vector3(horizontal, 0, vertical);
-        rb.MovePosition(transform.position + move * Time.deltaTime * moveSpeed); 
+        rb.MovePosition(transform.position + move * Time.deltaTime * moveSpeed);
         if (isJumping)
         {
             rb.AddForce(Vector3.up * JumpVelocity, ForceMode.Impulse);
@@ -36,4 +36,5 @@ public class PlayerBehavior : MonoBehaviour
 
         isJumping = false;
     }
+
 }
