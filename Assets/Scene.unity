@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -414,6 +414,10 @@ PrefabInstance:
       value: FloorTriggerVolume
       objectReference: {fileID: 0}
     - target: {fileID: 3305860681095436955, guid: b4ee75f9b597842f085bfb263bbcb278, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305860681095436955, guid: b4ee75f9b597842f085bfb263bbcb278, type: 3}
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
@@ -782,8 +786,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1825021096092416749, guid: ebae7af5c42c646d58da176ddff70f70, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825021096092416749, guid: ebae7af5c42c646d58da176ddff70f70, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825021096092416749, guid: ebae7af5c42c646d58da176ddff70f70, type: 3}
       propertyPath: m_ProvidesContacts
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1854442323065554081, guid: ebae7af5c42c646d58da176ddff70f70, type: 3}
       propertyPath: m_Name
