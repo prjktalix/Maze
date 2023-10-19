@@ -9,6 +9,15 @@ public class PlayerBehavior : MonoBehaviour
     public float JumpVelocity = 1f;
 
     private bool isJumping;
+    
+    private bool grounded = false;
+
+    //function for setting grounded value by the trigger volume script
+    public bool IsGrounded
+    {
+        get { return grounded; }
+        set { grounded = value; }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +38,7 @@ public class PlayerBehavior : MonoBehaviour
 
         Vector3 move = new Vector3(horizontal, 0, vertical);
         rb.MovePosition(transform.position + move * Time.deltaTime * moveSpeed);
-        if (isJumping)
+        if (isJumping && grounded == true) //added another conditional that the ball must be grounded
         {
             rb.AddForce(Vector3.up * JumpVelocity, ForceMode.Impulse);
         }
