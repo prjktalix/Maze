@@ -1,4 +1,4 @@
-# Maze
+# Maze - Rapid Prototype (Toys)
 ## Collaborators and Contribution:
 
 Jordan:
